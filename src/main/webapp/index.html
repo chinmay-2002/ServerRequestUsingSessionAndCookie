@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Counter</title>
+    <style>
+    button {
+    background-color: lightpink;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.3s;
+    white-space: nowrap;
+}
+
+button:hover {
+    background-color: red;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+button:hover::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: width 0.3s, height 0.3s, opacity 0.3s;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+button:hover::after {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+    
+    </style>
+</head>
+<body bgcolor='lightblue'>
+   <center>
+   	<h1>Welcome to Chinmay's Server Request Counter</h1>
+    <h3>This page tracks how many times you have visited.</h3>
+    <form action="sessionCounter" method="get">
+        <button type="submit">Count My Visit (Session)</button>
+    </form>
+    <br/>
+    <form action="cookieCounter" method="get">
+        <button type="submit">Count My Visit (Cookie)</button>
+    </form>
+   </center>
+</body>
+</html>

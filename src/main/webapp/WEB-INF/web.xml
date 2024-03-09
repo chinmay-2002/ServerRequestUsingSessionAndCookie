@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+ <servlet>
+        <servlet-name>SessionCounterServlet</servlet-name>
+        <servlet-class>com.sessioncookie.SessionCounterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CookieCounterServlet</servlet-name>
+        <servlet-class>com.sessioncookie.CookieCounterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServerRequestCount</servlet-name>
+        <servlet-class>com.sessioncookie.ServerRequestCount</servlet-class>
+    </servlet> 
+    <servlet>
+        <servlet-name>ServerReqCountCookie</servlet-name>
+        <servlet-class>com.sessioncookie.ServerReqCountCookie</servlet-class>
+    </servlet> 
+    
+    <servlet-mapping>
+        <servlet-name>SessionCounterServlet</servlet-name>
+        <url-pattern>/sessionCounter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CookieCounterServlet</servlet-name>
+        <url-pattern>/cookieCounter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServerRequestCount</servlet-name>
+        <url-pattern>/requestCounter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServerReqCountCookie</servlet-name>
+        <url-pattern>/requestCounterCookie</url-pattern>
+    </servlet-mapping>
+    
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+    <display-name>ServerReqCount</display-name>
+</web-app>
